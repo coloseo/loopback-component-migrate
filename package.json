@@ -1,17 +1,18 @@
 {
-  "name": "loopback-component-migrate",
-  "version": "0.0.0-semantically-released.0",
+  "name": "loopback-component-migration",
+  "version": "1.0.0",
   "description": "Migration framework for Loopback.",
   "author": {
     "name": "Tom Kirkpatrick @mrfelton"
   },
   "contributors": [
     "Scott Lively @slively",
-    "Ivan Tugay @listepo"
+    "Ivan Tugay @listepo",
+    "Ging.wu@coloseo.cn"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/fullcube/loopback-component-migrate.git"
+    "url": "https://github.com/coloseo/loopback-component-migration.git"
   },
   "keywords": [
     "loopback",
@@ -20,9 +21,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/fullcube/loopback-component-migrate/issues"
+    "url": "https://github.com/coloseo/loopback-component-migration/issues"
   },
-  "homepage": "https://github.com/fullcube/loopback-component-migrate",
+  "homepage": "https://github.com/coloseo/loopback-component-migration",
   "files": [
     "migration-skeleton.js",
     "lib",
@@ -35,53 +36,36 @@
   },
   "main": "./lib/index.js",
   "bin": {
-    "loopback-component-migrate": "./bin/cli"
+    "loopback-component-migrate": "./bin/cli.js"
   },
   "scripts": {
-    "lint": "jscs lib && jshint lib",
-    "test": "mocha -R spec --timeout 10000 test/test.js",
-    "test:watch": "npm run test -- -w",
-    "pretest": "npm run lint",
-    "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "outdated": "npm outdated --depth=0",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "lint": "eslint .",
+    "test": "mocha",
+    "pretest": "npm run lint"
   },
   "dependencies": {
-    "cli-prompt": "^0.4.2",
-    "commander": "^2.8.1",
-    "debug": "^2.2.0",
+    "cli-prompt": "^0.6.0",
+    "commander": "^2.9.0",
+    "debug": "^2.6.0",
     "mkdirp": "^0.5.1"
   },
   "peerDependencies": {
-    "loopback": ">=2.22.0"
+    "loopback": ">=3.1.1"
   },
   "devDependencies": {
     "bluebird": "latest",
     "chai": "latest",
-    "condition-circle": "^1.5.0",
-    "ghooks": "^1.3.2",
-    "jscs": "latest",
-    "jshint": "latest",
     "lodash": "latest",
-    "loopback": ">=2.22.0",
-    "loopback-boot": "^2.12.2",
-    "loopback-component-explorer": "2.1.1",
-    "loopback-datasource-juggler": ">=2.4.0",
-    "loopback-testing": "1.2.0",
+    "loopback": ">=3.1.1",
+    "loopback-boot": "^2.23.0",
+    "loopback-component-explorer": "4.0.0",
+    "loopback-testify": "2.0.1",
     "mocha": "latest",
     "nyc": "latest",
-    "semantic-release": "^4.3.5",
     "sinon": "latest",
     "sinon-chai": "latest",
-    "validate-commit-msg": "^2.8.0"
-  },
-  "config": {
-    "ghooks": {
-      "commit-msg": "validate-commit-msg",
-      "pre-commit": "npm run lint"
-    }
-  },
-  "release": {
-    "verifyConditions": "condition-circle"
+    "eslint": "^3.12.2",
+    "eslint-config-airbnb-base": "^11.0.0",
+    "eslint-plugin-import": "^2.2.0"
   }
 }

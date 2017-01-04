@@ -1,5 +1,0 @@
-deployment:
-  master:
-    branch: [master]
-    commands:
-      - npm run semantic-release

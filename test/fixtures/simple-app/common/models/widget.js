@@ -1,3 +1,2 @@
-module.exports = function(Widget) {
-
+module.exports = () => {
 };
