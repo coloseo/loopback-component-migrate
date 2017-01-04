@@ -1,6 +1,6 @@
 {
   "name": "loopback-component-migration",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Migration framework for Loopback.",
   "author": {
     "name": "Tom Kirkpatrick @mrfelton"
@@ -36,7 +36,7 @@
   },
   "main": "./lib/index.js",
   "bin": {
-    "loopback-component-migrate": "./bin/cli.js"
+    "migrate": "./bin/cli.js"
   },
   "scripts": {
     "lint": "eslint .",

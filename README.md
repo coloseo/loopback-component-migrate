@@ -10,7 +10,7 @@ The usage is based on the node-db-migrate project.
 
 1. Install in you loopback project:
 
-  `npm install --save loopback-component-migrate`
+  `npm install --save loopback-component-migration`
 
 2. Create a component-config.json file in your server folder (if you don't already have one)
 
@@ -18,7 +18,7 @@ The usage is based on the node-db-migrate project.
 
   ```json
   {
-    "loopback-component-migrate": {
+    "loopback-component-migration": {
       "key": "value"
     }
   }
@@ -53,7 +53,7 @@ Migrations can be run by calling the static `migrate` method on the Migration mo
 
 **Run all pending migrations:**
 ```javascript
-Migrate.migrate('up', function(err) {});
+Migrate.migrate('up', '', function(err) {});
 ```
 
 **Run all pending migrations upto and including 0002-somechanges:**
@@ -63,7 +63,7 @@ Migrate.migrate('up', '0002-somechanges', function(err) {});
 
 **Rollback all migrations:**
 ```javascript
-Migrate.migrate('down', function(err) {});
+Migrate.migrate('down', '', function(err) {});
 ```
 
 **Rollback migrations upto and including 0002-somechanges:**

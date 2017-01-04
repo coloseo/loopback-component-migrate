@@ -9,11 +9,11 @@ const program = require('commander');
 const version = require(`${process.cwd()}/package.json`).version;
 
 /**
- * Command line implementation for loopback-component-migrate.
+ * Command line implementation for migrate.
  *
  * Common usage case is:
  *
- * ./node_modules/.bin/loopback-component-migrate create|up|down
+ * ./node_modules/.bin/migrate create|up|down
  */
 program
   .version(version)
