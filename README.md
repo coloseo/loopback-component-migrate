@@ -1,6 +1,6 @@
 A library to add simple database migration support to loopback projects.
 
-[![Dependencies](http://img.shields.io/david/fullcube/loopback-component-migrate.svg?style=flat)](https://david-dm.org/fullcube/loopback-component-migrate)
+[![Build Status](https://api.travis-ci.org/coloseo/loopback-component-migration.svg?branch=master)](https://travis-ci.org/coloseo/loopback-component-migration)
 
 Migrations that have been run will be stored in a table called 'Migrations'.
 The library will read the loopback datasources.json files based on the NODE_ENV environment variable just like loopback does.
