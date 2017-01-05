@@ -1,4 +1,4 @@
-A library to add simple database migration support to loopback projects.
+A library to add simple database migration support to loopback projects. support loopback v3.x
 
 [![Build Status](https://api.travis-ci.org/coloseo/loopback-component-migration.svg?branch=master)](https://travis-ci.org/coloseo/loopback-component-migration)
 
@@ -46,6 +46,10 @@ The usage is based on the node-db-migrate project.
 
   [Array] : ACLs to apply to Migration and MigrationMap models. *(default: [])*
 
+- `public`
+
+    [Boolean] : A boolean indicating wether REST api methods should be exposed on the Migration and MigrationMap models. *(default: false)*
+
 
 ## Running Migrations
 
@@ -63,7 +67,7 @@ Migrate.migrate('up', '0002-somechanges', function(err) {});
 
 **Rollback all migrations:**
 ```javascript
-Migrate.migrate('down', '', function(err) {});
+Migrate.migrate('down', '', function(err) {}); //*the second param can not be missed
 ```
 
 **Rollback migrations upto and including 0002-somechanges:**
